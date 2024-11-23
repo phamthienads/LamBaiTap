@@ -2,5 +2,3 @@ Ask : As you start the game, note things like, Are the instructions clear?  Do y
 Answer : Không, tôi không biết cần phải làm gì, game không đưa ra hướng dẫn hay yêu cầu cụ thể.
 
 It would be better if from the beginning there were instructions on the screen what to do next
-
-It's so confusing without any hints or instructions
