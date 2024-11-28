@@ -1,7 +1,7 @@
-// Khai báo biến kiểu int
+// int
 int age;
-int namSinh;
+int yearOfBirth;
 
-// Khai báo biến kiểu float
-float trongLuong;
-float chieuCao;
+// float
+float weight;
+float height;
