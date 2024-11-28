@@ -1,17 +1,20 @@
-// Function definition (example)
-function checkValue() {
+#include <iostream>
+using namespace std;
 
-    // Function logic here
-    console.log("Checking value...");
-    // Example logic without parameters
-    let value = 10; // or any default value
+void checkValue() {
+
+    cout << "Checking value..." << endl;
+    int value = 10;
     if (value > 0) {
-        console.log("The value is positive.");
+        cout << "The value is positive." << endl;
     } else if (value < 0) {
-        console.log("The value is negative.");
+        cout << "The value is negative." << endl;
     } else {
-        console.log("The value is zero.");
+        cout << "The value is zero." << endl;
     }
 }
-// Function invocation with no parameters
-checkValue();
+
+int main() {
+    checkValue();
+    return 0;
+}
