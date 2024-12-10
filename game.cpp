@@ -4,82 +4,82 @@
 #include <string>
 using namespace std;
 
-// Nguyên mẫu hàm
+// Function prototypes
 void displayPrizes(const string prizes[], int prizeCount);
 int calculateScore(int baseScore);
 
 int main() {
-    // Khởi tạo bộ sinh số ngẫu nhiên
+    // Initialize random number generator
     srand(static_cast<unsigned>(time(0)));
 
-    // Chào người chơi
+    // Welcome the player
     string playerName;
-    cout << "Chào mừng đến với trò chơi! Tên bạn là gì? ";
+    cout << "Welcome to the game! What is your name? ";
     getline(cin, playerName);
-    cout << "Xin chào, " << playerName << "! Bắt đầu trò chơi nào!" << endl;
+    cout << "Hello, " << playerName << "! Let's start the game!" << endl;
 
-    // Tạo một số ngẫu nhiên
+    // Generate a random number
     int randomNumber = rand() % 3 + 1;
 
-    // Câu lệnh switch để xác định kịch bản
+    // Switch statement to determine the scenario
     string prize;
     switch (randomNumber) {
         case 1:
-            prize = "Cúp Vàng";
-            cout << "Bạn đã tìm thấy một Cúp Vàng!" << endl;
+            prize = "Gold Cup";
+            cout << "You found a Gold Cup!" << endl;
             break;
         case 2:
-            prize = "Huy Chương Bạc";
-            cout << "Bạn đã tìm thấy một Huy Chương Bạc!" << endl;
+            prize = "Silver Medal";
+            cout << "You found a Silver Medal!" << endl;
             break;
         case 3:
-            prize = "Huy Hiệu Đồng";
-            cout << "Bạn đã tìm thấy một Huy Hiệu Đồng!" << endl;
+            prize = "Bronze Badge";
+            cout << "You found a Bronze Badge!" << endl;
             break;
         default:
-            cout << "Không tìm thấy phần thưởng!" << endl;
+            cout << "No prize found!" << endl;
             break;
     }
 
-    // Thêm vòng lặp while để chơi lại trò chơi
+    // Add a while loop to play the game again
     char playAgain;
     while (true) {
-        cout << "Bạn có muốn chơi lại không? (y/n): ";
+        cout << "Do you want to play again? (y/n): ";
         cin >> playAgain;
 
         if (playAgain == 'n' || playAgain == 'N') {
-            cout << "Cảm ơn vì đã chơi, " << playerName << "!" << endl;
+            cout << "Thank you for playing, " << playerName << "!" << endl;
             break;
         } else if (playAgain == 'y' || playAgain == 'Y') {
-            cout << "Khởi động lại trò chơi..." << endl;
+            cout << "Restarting the game..." << endl;
         } else {
-            cout << "Nhập không hợp lệ. Vui lòng nhập 'y' hoặc 'n'." << endl;
+            cout << "Invalid input. Please enter 'y' or 'n'." << endl;
         }
     }
 
-    // Sử dụng vòng lặp for để hiển thị các phần thưởng đã thu thập
-    string prizes[] = {"Cúp Vàng", "Huy Chương Bạc", "Huy Hiệu Đồng"};
+    // Use a for loop to display the collected prizes
+    string prizes[] = {"Gold Cup", "Silver Medal", "Bronze Badge"};
     int prizeCount = 3;
-    cout << "\nĐây là tất cả các phần thưởng có thể có: " << endl;
+    cout << "\nHere are all the possible prizes: " << endl;
     displayPrizes(prizes, prizeCount);
 
-    // Sử dụng hàm để tính điểm
+    // Function to calculate the final score
     int baseScore = 100;
     int finalScore = calculateScore(baseScore);
-    cout << "Điểm cuối cùng của bạn là: " << finalScore << endl;
+    cout << "Your final score is: " << finalScore << endl;
 
     return 0;
 }
 
-// Hàm để hiển thị danh sách phần thưởng
+// Function to display the list of prizes
 void displayPrizes(const string prizes[], int prizeCount) {
     for (int i = 0; i < prizeCount; i++) {
         cout << "- " << prizes[i] << endl;
     }
 }
 
-// Hàm để tính điểm cuối cùng
+// Function to calculate the final score
 int calculateScore(int baseScore) {
-    int multiplier = rand() % 5 + 1; // Hệ số ngẫu nhiên từ 1 đến 5
+    int multiplier = rand() % 5 + 1; // Random multiplier from 1 to 5
     return baseScore * multiplier;
 }
