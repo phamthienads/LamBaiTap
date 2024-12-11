@@ -1,0 +1,24 @@
+Selected Story: Little Red Riding Hood
+
+The story is changed with more challenges
+
+The player plays the role of controlling Little Red Riding Hood to overcome challenges
+
+The player's ultimate goal is to choose the right thing to use to win the challenges and defeat the final boss
+
+"Computer" has the role of giving instructions and implementing a random element in the game
+
+The challenges that must be overcome are:
+The Forest
+The Village
+The Cave
+The Ice River
+The Castle
+The City
+The Desert
+The Island
+The Final Boss
+
+And in more like 1 map than different levels
+
+Players need to overcome small challenges by choosing the right items to defeat and receive rewards, collecting at least 5 items to defeat the final boss.
