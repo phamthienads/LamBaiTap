@@ -71,32 +71,32 @@ int main() {
 	reader.close();    // close file
 	cout << "\nSee you later!\n";
 	
-	ofstream writer; // Tạo một output file stream để ghi dữ liệu
-	writer.open("Restaurants.csv", ios::app); // Mở tệp ở chế độ append
+	ofstream writer; // Create an output file stream to write data
+	writer.open("Restaurants.csv", ios::app); // Open the file in append mode
 
 	if (!writer) {
-		cerr << "Không thể mở tệp để ghi." << endl;
+		cerr << "Unable to open file for writing." << endl;
 		return -1;
 	}
 
-	bool add_more = true; // Biến để kiểm tra xem người dùng có muốn thêm dữ liệu không
+	bool add_more = true; // Variable to check if the user wants to add more data
 	while (add_more) {
-		cout << "Nhập tên nhà hàng: ";
+		cout << "Enter restaurant name: ";
 		getline(cin, rname);
-		cout << "Nhập loại thức ăn: ";
+		cout << "Enter type of food: ";
 		getline(cin, food_type);
-		cout << "Nhập địa điểm: ";
+		cout << "Enter location: ";
 		getline(cin, location);
 
-		// Tạo dòng để ghi vào tệp
+		// Create a line to write to the file
 		writer << rname << "," << food_type << "," << location << endl;
 
-		cout << "Bạn có muốn thêm nhà hàng khác không? 1 cho có, 0 cho không: ";
+		cout << "Do you want to add another restaurant? 1 for yes, 0 for no: ";
 		getline(cin, query);
 		add_more = stoi(query);
 	}
 
-	writer.close(); // Đóng tệp sau khi ghi xong
+	writer.close(); // Close the file after writing
 
 	return 0;
 
